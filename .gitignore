@@ -1,0 +1,36 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+# VSCode settings
+.vscode/
+# macOS files
+.DS_Store
+# Logs and databases
+*.log
+*.sqlite3
+# Environment variables
+.env
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+# pytest cache
+.pytest_cache/
+# mypy cache
+.mypy_cache/
+# Sphinx documentation build
+docs/_build/
+# Celery beat schedule file
+celerybeat-schedule
+
