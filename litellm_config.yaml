@@ -1,28 +1,28 @@
 model_list:
-  - model_name: gemini-2.0-flash-lite
-    litellm_params:
-      model: gemini/gemini-2.0-flash-lite
-      api_key: os.environ/GEMINI_API_KEY
-  - model_name: gemini-2.5-flash
-    litellm_params:
-      model: gemini/gemini-2.5-flash
-      api_key: os.environ/GEMINI_API_KEY
-  - model_name: gemini-2.0-flash
-    litellm_params:
-      model: gemini/gemini-2.0-flash
-      api_key: os.environ/GEMINI_API_KEY
-  - model_name: gemini-2.0-flash-exp
-    litellm_params:
-      model: gemini/gemini-2.0-flash-exp
-      api_key: os.environ/GEMINI_API_KEY
-  - model_name: gemini-1.5-flash
-    litellm_params:
-      model: gemini/gemini-1.5-flash
-      api_key: os.environ/GEMINI_API_KEY
-  - model_name: gemini-1.5-flash-8b
-    litellm_params:
-      model: gemini/gemini-1.5-flash-8b
-      api_key: os.environ/GEMINI_API_KEY
+  # - model_name: gemini-2.0-flash-lite
+  #   litellm_params:
+  #     model: gemini/gemini-2.0-flash-lite
+  #     api_key: os.environ/GEMINI_API_KEY
+  # - model_name: gemini-2.5-flash
+  #   litellm_params:
+  #     model: gemini/gemini-2.5-flash
+  #     api_key: os.environ/GEMINI_API_KEY
+  # - model_name: gemini-2.0-flash
+  #   litellm_params:
+  #     model: gemini/gemini-2.0-flash
+  #     api_key: os.environ/GEMINI_API_KEY
+  # - model_name: gemini-2.0-flash-exp
+  #   litellm_params:
+  #     model: gemini/gemini-2.0-flash-exp
+  #     api_key: os.environ/GEMINI_API_KEY
+  # - model_name: gemini-1.5-flash
+  #   litellm_params:
+  #     model: gemini/gemini-1.5-flash
+  #     api_key: os.environ/GEMINI_API_KEY
+  # - model_name: gemini-1.5-flash-8b
+  #   litellm_params:
+  #     model: gemini/gemini-1.5-flash-8b
+  #     api_key: os.environ/GEMINI_API_KEY
 router_settings:
   redis_host: os.environ/REDIS_HOST
   redis_password: os.environ/REDIS_AUTH

@@ -6,17 +6,42 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "dbos>=1.12.0",
+    "duckdb>=1.3.2",
     "fastapi>=0.116.1",
+    "fastmcp>=2.12.0",
+    "google-adk>=1.13.0",
+    "google-genai>=1.32.0",
+    "gradio>=5.44.1",
     "httpx>=0.28.1",
     "httpx-sse>=0.4.1",
+    "kaleido>=1.0.0",
     "langfuse>=3.3.2",
+    "litellm>=1.74.15.post2",
+    "lmnr[all]>=0.7.9",
+    "logfire>=4.3.6",
     "neo4j>=5.28.2",
+    "openai>=1.99.5",
+    "openai-agents[litellm]>=0.2.5",
+    "openinference-instrumentation-litellm>=0.1.25",
+    "openinference-instrumentation-mcp>=1.3.0",
+    "openinference-instrumentation-openai-agents>=1.2.0",
+    "opentelemetry-distro>=0.57b0",
+    "opentelemetry-exporter-otlp>=1.36.0",
+    "opentelemetry-instrumentation>=0.57b0",
+    "opentelemetry-sdk>=1.36.0",
     "pgvector>=0.4.1",
+    "plotly[express]>=6.3.0",
     "psycopg>=3.2.9",
     "pydantic>=2.11.7",
+    "pyjwt>=2.10.1",
     "python-dotenv>=1.1.1",
     "redis>=6.4.0",
     "reflex>=0.8.8",
     "requests>=2.32.5",
     "stagehand>=0.5.2",
+]
+
+[dependency-groups]
+dev = [
+    "debugpy>=1.8.16",
 ]
