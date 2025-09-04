@@ -12,7 +12,6 @@
 -   **FastAPI**: High-performance web framework for APIs
 -   **DBOS**: Workflow orchestration and background task management
 -   **Stagehand** & **Playwright**: Browser automation for workflow steps
--   **Reflex**: Full-stack Python web framework (frontend/backend integration)
 -   **Langfuse**: Observability and tracing for LLM/AI workflows
 -   **LiteLLM**: Unified API for LLMs (OpenAI, Gemini, etc.). Extend free LLM pool.
 -   **PostgreSQL/pgvector**: Vector database for embeddings and structured data. DBOS, Application, LangFuse, LiteLLM, everything use this.
@@ -20,7 +19,7 @@
 -   **ClickHouse**: High-performance analytics database. This is in Langfuse stack.
 -   **MinIO**: S3-compatible object storage for media/events. Langfuse use this.
 -   **Docker Compose**: Service orchestration for local development
--   **Mail.tm, SMTP.dev, etc.**: Disposable email and mail relay for OTP/TOTP
+-   **Mail.tm**: Disposable email and mail relay for OTP/TOTP
 
 ---
 
@@ -32,14 +31,13 @@
     -   Stagehand/Playwright automates browser actions for login, OTP/TOTP, etc. Easy element locators can be done with Playwright, complex and unclear structure of elements then use Stagehand for semantic understandings.
     -   Langfuse provides tracing and observability for all AI/LLM calls
     -   LiteLLM abstracts LLM API calls (OpenAI, Gemini, etc.), provide large pool of free LLM API call.
--   **Frontend**: Reflex (React-based, Python-driven)
-    -   UI components for chat, input, message bubbles, etc.
-    -   Runs on port 3333 (default)
+-   **Frontend**: Google ADK Web - a fast, quick, easy to spine up chat interface with fully tracing and debuging feature.
+    -   Runs on port 8888 (default)
 -   **Databases**:
-    -   **pgvector**: Stores embeddings and structured data
+    -   **PostgreSQL/pgvector**: Postgres image with pgvector enabled.
     -   **ClickHouse**: Analytics and event storage for Langfuse
     -   **Redis**: Caching, queues, and session management for Langfuse and LiteLLM
--   **Object Storage**: MinIO for S3-compatible storage (media, events)
+-   **Object Storage**: MinIO for S3-compatible storage (media, events) for Langfuse
 -   **Observability**: Langfuse, OpenTelemetry, Logfire(not used yet)
 -   **Mail Services**: Integrates with disposable email providers Mail.TM for OTP/TOTP
 
@@ -81,8 +79,8 @@ This will start:
 -   MinIO
 -   Langfuse (web & worker)
 -   LiteLLM
--   Reflex frontend (port 3333)
--   FastAPI backend (port 8888)
+-   Google ADK Web(port 8888)
+-   FastAPI backend (port 8000)
 -   Other supporting services
 
 ### 4. Install Python Dependencies
@@ -119,12 +117,10 @@ reflex run
 
 ## Project Structure
 
--   `app/`: Reflex frontend app and UI components
+-   `agent/`: Google ADK agent for ADK Web
 -   `seezar_operator/`: Workflow orchestration, browser automation, mail listener
--   `dbos_client.py`, `check_jwt.py`: Utility scripts for DBOS and JWT
 -   `docker-compose.yml`: Service orchestration
 -   `init.sql`: DB initialization
--   `rxconfig.py`: Reflex configuration
 -   `pyproject.toml`: Python dependencies
 -   `README.md`: Project documentation
 
@@ -142,7 +138,7 @@ reflex run
 
 ## References
 
--   Disposable Email: [Mail.tm](https://docs.mail.tm/), [SMTP.dev](https://smtp.dev/accounts/)
+-   Disposable Email: [Mail.tm](https://docs.mail.tm/)
 -   Observability: [Langfuse](https://langfuse.com/)
 -   LLM API: [LiteLLM](https://github.com/BerriAI/litellm)
 -   Workflow Orchestration: [DBOS](https://dbos.dev/)

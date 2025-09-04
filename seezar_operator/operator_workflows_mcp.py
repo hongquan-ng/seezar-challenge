@@ -112,11 +112,15 @@ mcp_app = mcp.http_app(path="/")
 # Create FastAPI app for controlling this BDOS instance
 #########################################
 async def start_workflow_async():
-    handle: WorkflowHandleAsync = await DBOS.start_workflow_async(
+    scenario1_handle: WorkflowHandleAsync = await DBOS.start_workflow_async(
         seezar_operator_scenario_1, dealership_name="Ejner Hessel"
     )
-    wl_output = await handle.get_result()
-    DBOS.logger.info(f"workflow exited with result: {wl_output}")
+    scenario4_handle: WorkflowHandleAsync = await DBOS.start_workflow_async(seezar_operator_scenario_4)
+
+    wl_sc1_output = await scenario1_handle.get_result()
+    wl_sc4_output = await scenario4_handle.get_result()
+    DBOS.logger.info(f"workflow sc1 exited with result: {wl_sc1_output}")
+    DBOS.logger.info(f"workflow sc4 exited with result: {wl_sc4_output}")
 
 
 @asynccontextmanager
